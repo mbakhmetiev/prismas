@@ -24,7 +24,7 @@ headers = {
   'x-redlock-auth': token
 }
 
-# put the json response in pandas
+# put the json response in pandas dataframes
 df1 = response(rql1)
 df2 = response(rql2)
 
