@@ -37,7 +37,7 @@ if df1.empty and not df2.empty:
 
 # s3 cloud trail buckets present (not df2.empty) and some are exposed (not df1.empty)
 if not df1.empty and not df2.empty:
-# two tables are joined on bucket names to gt the buckets appearing in both
+# two tables are joined on bucket names to get the buckets appearing in both
   result = df1.merge(df2,left_on='bucketName',right_on='s3BucketName')
   print("s3 buckets not publicly exposed (pass): ", len(df2['s3BucketName']) - len(result))
   print("s3 buckets publicly exposed (fail): ", len(result))
